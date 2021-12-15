@@ -28,7 +28,7 @@ class _AdvertismentState extends State<Advertisment> {
                   colors: [Color(0xff191539), Color(0xff9067B0)]),
               image: DecorationImage(
                   image: AssetImage('assets/background.png'),
-                  fit: BoxFit.fill)),
+                  fit: BoxFit.cover)),
         ),
         Positioned(
           bottom: 0,

@@ -175,59 +175,68 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: widget.height,
-                width: widget.width,
-                child: CupertinoPicker(
-                  
-                  magnification: 1.5,
-                  useMagnifier: true,
-                  backgroundColor: widget.backgroundColor,
-                  scrollController: _controllerDay,
-                  selectionOverlay: null,
-                  looping: true,
-                  itemExtent: 50.0,
-                  onSelectedItemChanged: _changeDay,
-                  // ignore: invalid_use_of_protected_member
-                  children: _days((_controllerDay.positions.isEmpty)
-                      ? _controllerDay.initialItem
-                      : _controllerDay.selectedItem),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  height: widget.height,
+                  width: widget.width,
+                  child: CupertinoPicker(
+                    
+                    magnification: 1.2,
+                    useMagnifier: true,
+                    backgroundColor: widget.backgroundColor,
+                    scrollController: _controllerDay,
+                    selectionOverlay: null,
+                    looping: true,
+                    itemExtent: 50.0,
+                    onSelectedItemChanged: _changeDay,
+                    // ignore: invalid_use_of_protected_member
+                    children: _days((_controllerDay.positions.isEmpty)
+                        ? _controllerDay.initialItem
+                        : _controllerDay.selectedItem),
+                  ),
                 ),
               ),
-              Container(
-                height: widget.height,
-                width: widget.width,
-                child: CupertinoPicker(
-                  magnification: 1.5,
-                  useMagnifier: true,
-                  backgroundColor: widget.backgroundColor,
-                  scrollController: _controllerMoth,
-                  selectionOverlay: null,
-                  looping: true,
-                  itemExtent: 50.0,
-                  onSelectedItemChanged: _changeMoth,
-                  // ignore: invalid_use_of_protected_member
-                  children: _months((_controllerMoth.positions.isEmpty)
-                      ? _controllerMoth.initialItem
-                      : _controllerMoth.selectedItem),
+              Expanded(
+                flex: 4,
+                child: Container(
+                  height: widget.height,
+                  width: widget.width,
+                  child: CupertinoPicker(
+                    magnification: 1.2,
+                    useMagnifier: true,
+                    backgroundColor: widget.backgroundColor,
+                    scrollController: _controllerMoth,
+                    selectionOverlay: null,
+                    looping: true,
+                    itemExtent: 50.0,
+                    onSelectedItemChanged: _changeMoth,
+                    // ignore: invalid_use_of_protected_member
+                    children: _months((_controllerMoth.positions.isEmpty)
+                        ? _controllerMoth.initialItem
+                        : _controllerMoth.selectedItem),
+                  ),
                 ),
               ),
-              Container(
-                height: widget.height,
-                width: widget.width,
-                child: CupertinoPicker(
-                  magnification: 1.5,
-                  useMagnifier: true,
-                  backgroundColor: widget.backgroundColor,
-                  scrollController: _controllerYear,
-                  selectionOverlay: null,
-                  looping: true,
-                  itemExtent: 50.0,
-                  onSelectedItemChanged: _changeYear,
-                  // ignore: invalid_use_of_protected_member
-                  children: _years((_controllerYear.positions.isEmpty)
-                      ? _controllerYear.initialItem
-                      : _controllerYear.selectedItem),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  height: widget.height,
+                  width: widget.width,
+                  child: CupertinoPicker(
+                    magnification: 1.2,
+                    useMagnifier: true,
+                    backgroundColor: widget.backgroundColor,
+                    scrollController: _controllerYear,
+                    selectionOverlay: null,
+                    looping: true,
+                    itemExtent: 50.0,
+                    onSelectedItemChanged: _changeYear,
+                    // ignore: invalid_use_of_protected_member
+                    children: _years((_controllerYear.positions.isEmpty)
+                        ? _controllerYear.initialItem
+                        : _controllerYear.selectedItem),
+                  ),
                 ),
               ),
             ],
