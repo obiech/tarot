@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tarot/ui/numerology.dart';
 import 'package:tarot/ui/widgets/subscription.dart';
 import 'package:tarot/utils/extension.dart';
@@ -54,10 +55,7 @@ class _PurchasePageState extends State<PurchasePage> {
                     SizedBox(
                       height: size.height / 173.25,
                     ),
-                    CircleAvatar(
-                      radius: 144,
-                      backgroundImage: AssetImage('assets/logo2.png'),
-                    ),
+                    SvgPicture.asset('assets/Group 161.svg', fit: BoxFit.cover, height: size.height/4.69),
                     SizedBox(
                       height: size.height / 34.59,
                     ),

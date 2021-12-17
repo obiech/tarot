@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tarot/ui/widgets/cardOfDay.dart';
 import 'package:tarot/ui/widgets/glassmorphism.dart';
+import 'package:tarot/ui/widgets/mapsForWeek.dart';
+import 'package:tarot/ui/widgets/wish.dart';
 import 'package:tarot/utils/extension.dart';
 
 class Tapo extends StatefulWidget {
@@ -81,6 +84,7 @@ class _TapoState extends State<Tapo> with SingleTickerProviderStateMixin {
                       borderRadius: BorderRadius.circular(25)
                     ),
                     child: TabBar(  
+                      indicatorPadding: EdgeInsets.all(4),
                       controller: _tabController,
                       indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
@@ -112,7 +116,7 @@ class _TapoState extends State<Tapo> with SingleTickerProviderStateMixin {
                   
                   Wish(),
                     CardOfTheDay(),
-                    MapOfTheWeek(),
+                    MapsForWeek(),
                 ]))
               ],
             ),
@@ -123,59 +127,4 @@ class _TapoState extends State<Tapo> with SingleTickerProviderStateMixin {
   }
 }
 
-class MapOfTheWeek extends StatelessWidget {
-  const MapOfTheWeek({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Buy Now',
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    );
-  }
-}
-
-class CardOfTheDay extends StatelessWidget {
-  const CardOfTheDay({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Place Bid',
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    );
-  }
-}
-
-class Wish extends StatelessWidget {
-  const Wish({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Text(
-          '',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      );
-  }
-}

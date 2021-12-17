@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tarot/utils/extension.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tarot/ui/purchase.dart';
@@ -52,10 +53,7 @@ class _AdvertismentState extends State<Advertisment> {
                 SizedBox(
                   height: size.height / 173.25,
                 ),
-                CircleAvatar(
-                  radius: 144,
-                  backgroundImage: AssetImage('assets/logo2.png'),
-                ),
+                SvgPicture.asset('assets/Group 161.svg', fit: BoxFit.cover, height: size.height/4.69),
                 SizedBox(
                   height: size.height / 34.59,
                 ),
